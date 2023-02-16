@@ -87,4 +87,24 @@ return {
       },
     },
   },
+  {
+    "tpope/vim-fugitive",
+    init = function()
+      vim.keymap.set("n", "<leader>go", [[:G<CR>]], {
+        noremap = true,
+        silent = true,
+      })
+    end,
+  },
+  -- Change case type
+  -- crs (coerce to snake_case).
+  -- MixedCase (crm),
+  -- camelCase (crc),
+  -- snake_case (crs),
+  -- UPPER_CASE (cru),
+  -- dash-case (cr-),
+  -- dot.case (cr.),
+  -- space case (cr<space>),
+  -- and Title Case (crt)
+  { "tpope/vim-abolish" },
 }

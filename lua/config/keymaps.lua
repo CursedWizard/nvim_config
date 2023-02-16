@@ -58,4 +58,4 @@ end
 map("n", "<C-c>", "<cmp>BufferLinePickClose<CR>", opts)
 map("n", "<C-b>", "<cmp>BufferLinePick<CR>", opts)
 
--- map("n", "<leader>l", [[:lua Telescope live_grep")<CR>]])
+-- map("n", "<leader>l", [[:lua Telescope live_grep")<CR>]]) a
