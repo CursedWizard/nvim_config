@@ -31,6 +31,13 @@ function WinMove(key)
   end
 end
 
+-- Remap d key so that it doesnt cut the text
+map("v", "d", [["_c]], opts)
+map("n", "dd", [["_dd]], opts)
+map("n", "dw", [["_dd]], opts)
+map("n", "de", [["_de]], opts)
+map("n", "dl", [["_dl]], opts)
+
 map("n", "<Tab>i", [[<C-w>c]], opts)
 map("n", "<Tab>o", [[<C-w>o]], opts)
 map("n", "<Tab>j", [[<C-w>j]], opts)
