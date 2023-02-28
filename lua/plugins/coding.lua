@@ -94,6 +94,10 @@ return {
         noremap = true,
         silent = true,
       })
+      vim.keymap.set("n", "<leader>gl", [[:Git log<CR>]], {
+        noremap = true,
+        silent = true,
+      })
     end,
   },
   -- Change case type
@@ -107,4 +111,10 @@ return {
   -- space case (cr<space>),
   -- and Title Case (crt)
   { "tpope/vim-abolish" },
+  {
+    "notjedi/nvim-rooter.lua",
+    init = function()
+      require("nvim-rooter").setup()
+    end,
+  },
 }
