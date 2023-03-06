@@ -31,6 +31,11 @@ function WinMove(key)
   end
 end
 
+-- to unmap tab basically
+map('n', '<C-p>', [[<C-i>]], opts)
+
+map('i', '<C-z>', [[<C-^>]], opts)
+
 -- Remap d key so that it doesnt cut the text
 map("v", "d", [["_c]], opts)
 map("n", "dd", [["_dd]], opts)

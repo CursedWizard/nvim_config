@@ -6,15 +6,15 @@ return {
     priority = 900,
     dependencies = "kkharji/sqlite.lua",
     init = function()
-      require("legendary").keymaps({
-        {
-          "<C-p>",
-          require("legendary").find,
-          hide = true,
-          description = "Open Legendary",
-          mode = { "n", "v" },
-        },
-      })
+      -- require("legendary").keymaps({
+      --   {
+      --     "<C-p>",
+      --     require("legendary").find,
+      --     hide = true,
+      --     description = "Open Legendary",
+      --     mode = { "n", "v" },
+      --   },
+      -- })
     end,
     config = function()
       require("legendary").setup({

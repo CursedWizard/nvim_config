@@ -43,6 +43,7 @@ return {
       client_capabilities = require("cmp_nvim_lsp").default_capabilities(client_capabilities)
       client_capabilities.offsetEncoding = { "utf-16" }
 
+      require("lspconfig").eslint.setup({})
       require("clangd_extensions").setup({
         server = {
           -- on_attach = prefer_null_ls_fmt,
