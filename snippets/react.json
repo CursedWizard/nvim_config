@@ -1,0 +1,18 @@
+{
+    "componentFunctional": {
+          "prefix": "rn-comp ",
+          "body": [
+              "import React from \"react\";",
+              "import { View } from \"react-native\";",
+              "",
+              "",
+              "export function ${TM_FILENAME_BASE}() {",
+              "  return (",
+              "    <View />",
+              "  );",
+              "}",
+              ""
+          ],
+          "description": "Create React Native Functional Component"
+      }
+}

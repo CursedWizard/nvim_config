@@ -9,6 +9,7 @@ return {
     keys = {
       { "<leader>sf", Util.telescope("files"), desc = "Search Files (root dir)" },
       { "<leader>sF", Util.telescope("files", { cwd = false }), desc = "Search Files (cwd)" },
+      { "<leader>sb", ":Telescope buffers<CR>", desc = "Search Files n buffer"},
     },
   },
   {
@@ -27,6 +28,7 @@ return {
         map("n", "[h", gs.prev_hunk, "Prev Hunk")
         map({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
         map({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+        map("n", "<leader>gb", gs.blame_line, "Blame Line")
         map("n", "<leader>hS", gs.stage_buffer, "Stage Buffer")
         map("n", "<leader>hu", gs.undo_stage_hunk, "Undo Stage Hunk")
         map("n", "<leader>hR", gs.reset_buffer, "Reset Buffer")

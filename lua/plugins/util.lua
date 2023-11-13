@@ -28,9 +28,23 @@ return {
   {
     "kevinhwang91/rnvimr",
     lazy = false,
+    enabled = true,
     init = function()
       vim.keymap.set("n", "<Space>r", [[:RnvimrToggle<CR>]], { noremap = true, silent = true })
       vim.g.rnvimr_enable_picker = 1
+    end,
+  },
+  {
+    "kelly-lin/ranger.nvim",
+    enabled = false,
+    config = function()
+      require("ranger-nvim").setup({ replace_netrw = true })
+      vim.api.nvim_set_keymap("n", "<Space>r", "", {
+        noremap = true,
+        callback = function()
+          require("ranger-nvim").open(true)
+        end,
+      })
     end,
   },
   {
@@ -38,4 +52,40 @@ return {
     ft = "qf",
   },
   { "github/copilot.vim", lazy = false, enabled = false },
+  {
+    "rafamadriz/friendly-snippets",
+    enabled = false,
+  },
+  {
+    "folke/flash.nvim",
+    enabled = false,
+  },
+  {
+    "chentoast/marks.nvim",
+    config = function ()
+      require("marks").setup({})
+    end
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    config = function ()
+      require("luasnip.loaders.from_vscode").load({})
+    end
+  },
+  {
+    "lmburns/lf.nvim",
+    dependencies = "akinsho/toggleterm.nvim",
+    enabled = false,
+    config = function ()
+      require("lf").setup({})
+      -- vim.keymap.set(
+      --   "n",
+      --   "<Space>r",
+      --   function ()
+      --     require("lf").start(nil)
+      --   end,
+      --   { noremap = true, silent = true }
+      -- )
+    end
+  }
 }
